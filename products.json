@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "image": "",
+        "titolo": "",
+        "marchio": "",
+        "modello": "",
+        "descrizione": "",
+        "prezzo": 0,
+        "categoria": "",
+        "quantita": 0
+    },
+    {
+        "id": 2,
+        "image": "",
+        "titolo": "",
+        "marchio": "",
+        "modello": "",
+        "descrizione": "",
+        "prezzo": 0,
+        "categoria": "",
+        "quantita": 0
+    },
+    {
+        "id": 3,
+        "image": "",
+        "titolo": "",
+        "marchio": "",
+        "modello": "",
+        "descrizione": "",
+        "prezzo": 0,
+        "categoria": "",
+        "quantita": 0
+    }
+]
