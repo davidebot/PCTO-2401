@@ -12,10 +12,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dettaglio.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg bg-body-gradient">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img class="img-fluid" src="assets/icon.png" alt=""
+                    id="logo_Icona" style="height: 10vh;">CreatePC( )</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inserimento.html">Inserisci prodotto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assembla.html">Assembla PC</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">CreatePC()</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
@@ -36,7 +63,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <div id="containerDettagli">
         <div class="row d-flex justify-content-start">
@@ -73,25 +100,26 @@
                     <div class="col-12 col-md-5 col-lg-3" id="priceContainer">
                         <p class="rect" id="remainingItemDettaglio"></p>
                         <p class="price rect" id="itemPriceDettaglio">531,57€</p>
-                            <button class=" buyButton button-24" role="button" id="buyButtonDettaglio">Acquista</button>
-                            <img src="assets/trash.svg" alt="" class="trashIcon">
+                        <button class=" buyButton button-24" role="button" id="buyButtonDettaglio">Acquista</button>
+                        <img src="assets/trash.svg" alt="" class="trashIcon">
                     </div>
                     <div class="col-12 col-md-7  col-lg-9" id="descContainer">
-                        <p class="descText" id="descDettaglio">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        <p class="descText" id="descDettaglio">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit.
                             Veniam nisi
-                            reprehenderit odio ex blanditiis eius repellendus dicta voluptatum culpa, fugit similique
+                            reprehenderit odio ex blanditiis eius repellendus dicta voluptatum culpa, fugit
+                            similique
                             minima ut soluta deleniti, nobis aliquid quo iusto necessitatibus!</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <script type="module" src="dettaglio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="dettaglio.js"></script>
 </body>
 
 </html>

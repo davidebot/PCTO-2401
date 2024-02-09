@@ -8,11 +8,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assembla.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg bg-body-gradient">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img class="img-fluid" src="assets/icon.png" alt=""
+                    id="logo_Icona" style="height: 10vh;">CreatePC( )</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inserimento.html">Inserisci prodotto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="assembla.html">Assembla PC</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">NomeSito</a>
             <a class="navbar-toggler" type="a" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
@@ -34,7 +61,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <main>
         <section class="p-3">
@@ -61,7 +88,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-case">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -77,7 +106,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-sm">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,7 +124,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-processore">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +142,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-gpu">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,7 +160,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-alimentatore">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,7 +178,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-ram">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +196,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-storage">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -173,7 +214,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-dissipatore">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,7 +232,9 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="container">
+                            <div class="row" id="container-ventole">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -197,7 +242,9 @@
         </div>
         <p id="build">La tua build</p>
         <div class="container">
+            <div class="row" id="container-prodotti-selezionati">
 
+            </div>
         </div>
 
 
@@ -208,7 +255,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="assembla.js"></script>
 </body>
 
 </html>

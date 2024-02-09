@@ -15,7 +15,7 @@ let product = getProductByUrl()
 
 function redirect() {
     alert("Prodotto non trovato")
-    document.location.replace("/index.html")
+    document.location.replace("index.html")
 }
 images.forEach((e) => {
     e.addEventListener('click', () => {
@@ -25,7 +25,7 @@ images.forEach((e) => {
 });
 
 loadLocalStorage()
-addProdotto()
+// addProdotto()
 
 changeButtonState()
 loadImages()
@@ -35,7 +35,7 @@ modificaHTML()
 
 function loadLocalStorage() {
     array = JSON.parse(localStorage.getItem("prodotti"))
-    if(array === null){
+    if (array === null) {
         array = []
 
     }
@@ -81,8 +81,8 @@ function modificaHTML() {
     titleDettaglio.innerHTML = product['titolo']
     descDettaglio.innerHTML = product['descrizione']
     itemPriceDettaglio.innerHTML = product['prezzo'] + "€"
-    remaining.innerHTML=product['quantita'] + " rimanenti"
-    
+    remaining.innerHTML = product['quantita'] + " rimanenti"
+
 }
 
 function changeBorder(element) {
@@ -98,7 +98,7 @@ function changeBorder(element) {
 
 function loadImages() {
     imagesObj.push(product['image'])
-    for(let i = 1; i<=4; i++){
+    for (let i = 1; i <= 4; i++) {
         imagesObj.push(`https://robohash.org/computer${Math.floor((Math.random() * 20) + 1)}?set=set4`)
     }
 
@@ -111,7 +111,7 @@ function changeImage(e) {
 }
 
 changeRemaining()
-function changeRemaining(){
+function changeRemaining() {
     if (product['quantita'] == 0 || product['quantita'] > 10) {
         remaining.classList.add("hidden")
     } else {
@@ -145,12 +145,12 @@ function addProdotto() {
 }
 
 function eliminaProdotto() {
-    
+
     let index = array.findIndex((element) => {
         return element.id === product.id;
     });
-    
-    
+
+
     if (index !== -1) {
         array.splice(index, 1);  // Rimuove 1 elemento a partire dall'indice 'index'
         localStorage.setItem("prodotti", JSON.stringify(array));
