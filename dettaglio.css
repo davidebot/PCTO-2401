@@ -1,0 +1,153 @@
+                                            /* CSS Pagina Dettaglio */
+
+/* Immagini */
+.imgContainer {
+    margin-top: 10px;
+    padding-right: 25px;
+}
+
+.productImg {
+    height: width;
+    width: 95%;
+    cursor: pointer;
+}
+
+.mainProductImg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.borderOn {
+    border: black 1px solid
+}
+
+/* Spacing pagina */
+
+#containerDettagli {
+    margin-top: 50px;
+    padding-left: 25px;
+}
+
+/* Formattazione testo*/
+
+#titleDettaglio {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 25px;
+    border-bottom: gray 2px solid;
+}
+
+#descContainer {
+    padding-right: 5%;
+}
+
+#descDettaglio {
+    color: gray;
+    font-size: 24px;
+}
+
+#remainingItemDettaglio {
+    color: orangered;
+}
+
+#itemPriceDettaglio {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#priceContainer {
+    margin-bottom: 20px;
+}
+
+/* Tasti e funzionalità */
+
+.hidden {
+    display: none;
+}
+
+.buyButton {
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 120px;
+}
+
+.buyDisabled {
+    cursor: not-allowed;
+    background-color: hsl(180, 25%, 25%, 0.4);
+}
+
+.button-24 {
+    background: #FF6F91;
+    border: 1px solid #FF6F91;
+}
+
+.button-24:hover,
+.button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF6F91;
+    opacity: .5;
+}
+
+.trashIcon{
+    cursor:pointer;
+    margin-left: 10px;
+    width: 30px;
+}
+
+
+
+
+/* CSS PageNotFound */
+                                        
+/* Pagina */
+#pageNotFound {
+    background-color: rgb(28, 24, 48);
+    padding-top: 10%;
+}
+
+/* Formattazione testo */
+#errorText404 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 78px;
+    font-style: oblique;
+    color: white;
+}
+
+#errorNumber404 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 96px;
+    font-style: oblique;
+    border-bottom: darkslategrey 5px solid;
+    padding-bottom: 5%;
+    color: white;
+}
+
+#errorPage {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 38px;
+    font-style: oblique;
+    color: white;
+}
+
+.rect {        
+    line-height: 0.5;    
+}
