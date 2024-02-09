@@ -1,0 +1,70 @@
+#assembla {
+    font-weight: bolder;
+
+}
+
+.card {
+    border-radius: 12px;
+}
+.card.ingrandito{
+border-width: 10px;  
+border-color: black;  
+}
+
+.card:hover {
+    border-width: 10px;
+}
+
+.card-img-top0 {
+    height: 400px;
+    width: 270px;
+}
+
+.card-img-top1 {
+    height: 225px;
+    width: 270px;
+}
+
+.card-img-top2 {
+    height: 250px;
+    width: 250px;
+}
+
+.card-img-top3 {
+    height: 220px;
+    width: 250px;
+}
+
+.card-img-top4 {
+    height: 260px;
+    width: 250px;
+}
+
+.card-img-top5 {
+    height: 175px;
+    width: 285px;
+}
+
+.card-img-top6 {
+    height: 85px;
+    width: 285px;
+}
+
+.card-img-top7 {
+    height: 300px;
+    width: 250px;
+}
+
+.card-img-top8 {
+    height: 260px;
+    width: 250px;
+}
+
+#build {
+    text-align: center;
+    font-size: 32px;
+}
+
+.btn:hover {
+    background-color: rgb(7, 15, 156);
+}
