@@ -1,0 +1,162 @@
+:root {
+  --bs-primary: null;
+  --bs-primary-rgb:null;
+  --bs-tertiary: #FF9671;
+}
+.card{
+  --bs-card-bg:null ;
+
+}
+.btn-primary {
+  --bs-btn-bg: #FF6F91;
+  --bs-btn-border-color:#D65DB1;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  
+    .navbar {
+      padding: 0;
+    }
+    .navbar .navbar-nav .nav-link {
+      padding: 1em 0;
+    }
+    .navbar .navbar-nav .nav-item {
+      margin: 0 1em;
+    }
+  }
+  
+  .navbar .navbar-nav .nav-item {
+    position: relative;
+  }
+  .navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    content: "";
+    background-color: black;
+    width: 0%;
+    height: 4px;
+    transition: all 0.5s;
+  }
+  .navbar .navbar-nav .nav-item:hover::after {
+    width: 100%;
+  }
+  .sfondo{
+    background: linear-gradient(to right, #845EC2, #ffa600 );
+
+  }
+
+  .carousel-indicators{
+
+    transform:translateY(-100%);
+  }
+  .carousel {
+    border-radius: 55px 55px 55px 55px;
+    overflow: hidden;
+    margin: 1vw ;
+}
+
+#carouselProd {
+  border-radius: 0;
+  overflow: hidden;
+  margin: 1vw ;
+}
+
+.card{
+
+  border-width: 1vw;
+}
+.card-body{
+
+
+ border-radius: 200px;
+
+}
+.section{
+  background-color: rgba(0, 0, 0, 0.296);
+}
+
+#carouselInProd{
+
+  padding: 0px 85px 85px 85px;
+
+}
+
+#piuAcq{
+  width: 60%;
+}
+
+
+@media screen and (min-width: 667) { 
+  img{
+    height: 3%;
+  }
+}
+
+#corsairCarosello{
+  
+  object-fit: contain;
+}
+#nzxtCarosello{
+
+  object-fit: contain;
+}
+
+#giveawayCarosello{
+  object-fit: contain;
+}
+
+#msi_logo{
+  content: url("https://www.geekius.eu/wp-content/uploads/2023/11/msi_logo.png#1388" );
+  object-fit: contain;
+}
+#cooler_master_logo{
+  content: url("https://www.geekius.eu/wp-content/uploads/2023/11/cooler_master_logo.png#1389" );
+  object-fit: contain;
+}
+
+#corsair_logo{
+  content: url("https://www.geekius.eu/wp-content/uploads/2023/11/corsair_logo.png#1390" );
+  object-fit: contain;
+}
+
+#gigabyte_logo{
+  content: url("https://www.geekius.eu/wp-content/uploads/2023/11/gigabyte_logo.png#1391" );
+  object-fit: contain;
+}
+#noua_logo{
+  content: url("https://www.geekius.eu/wp-content/uploads/2023/11/noua_logo.png#1392" );
+  object-fit: contain;
+}
+
+#antec_logo{
+  content: url("https://www.geekius.eu/wp-content/uploads/2023/11/antec_logo.png#1393" );
+  object-fit: contain;
+}
+
+.form-control{
+  font-weight: bolder;
+  width: 40%;
+  margin-left: 1vw;
+  background-color:#845EC2;
+  background: #845EC2;
+  font-size: larger;
+  color: white;
+  border-top-left-radius: 15px;
+  padding-left: 40px;
+}
+
+#generali{
+  border-radius: 15px;
+  width: 100%;
+  margin: 0;
+}
+#logo_icona3{
+  height: 11px;
+}
