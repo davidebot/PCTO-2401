@@ -45,23 +45,60 @@
                                 <h1 class="card-title text-center mb-0">Inserimento nuovo prodotto</h1>
                             </div>
                             <div class="card-body">
-                                <form>
+                                <form id="form">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="nome" placeholder="" value="" />
-                                        <label for="nome">Nome del prodotto</label>
+                                        <input type="text" class="form-control" id="titolo" placeholder="" value="" />
+                                        <label for="titolo">Titolo del prodotto</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" id="marchio" required>
+                                            <option selected>Seleziona un marchio...</option>
+                                            <option value="NVidia">NVidia</option>
+                                            <option value="Amd">Amd </option>
+                                            <option value="Intel">Intel</option>
+                                        </select>
+                                        <label for="marchio">Marchio del prodotto</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <textarea type="text" class="form-control" id="modello"
+                                            placeholder=""></textarea>
+                                        <label for="modello">Modello del prodotto</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <textarea type="text" class="form-control" id="categoria"
+                                            placeholder=""></textarea>
+                                        <label for="categoria">Categoria del prodotto</label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <textarea type="text" class="form-control" id="descrizione"
                                             placeholder=""></textarea>
                                         <label for="descrizione">Descrizione del prodotto</label>
                                     </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="quantita" placeholder="" step="1"
+                                            value="0" />
+                                        <label for="quantita">Quantità dei prodotti</label>
+                                    </div>
                                     <div class="form-floating mb-3">
                                         <input type="number" class="form-control" id="prezzo" placeholder="" step="0.5"
                                             value="0" />
                                         <label for="prezzo">Prezzo del prodotto</label>
                                     </div>
+                                    <div class="input-group mb-3">
+                                        <div class="form-floating">
+                                            <input type="url" class="form-control" id="image" placeholder="" value="" />
+                                            <label for="image">Immagine del prodotto</label>
+                                        </div>
+                                        <span class="input-group-text" id="aggiorna-immagine">Anteprima</span>
+                                    </div>
+                                    <div>
+                                        <img id="anteprima-immagine" src="" alt="Anteprima immagine prodotto"
+                                            style="max-width: 100%; display: none;">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-floppy"></i>
+                                        Inserisci</a>
                                 </form>
-                                <a href="#" class="btn btn-primary"><i class="bi bi-floppy"></i> Inserisci</a>
                             </div>
                         </div>
 
@@ -74,6 +111,140 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <script>
+        function onImgChange() {
+            var url = document.getElementById("image").value;
+            var anteprima = document.getElementById("anteprima-immagine");
+            if (url) {
+                anteprima.src = url;
+                anteprima.style.display = "block";
+            } else {
+                anteprima.style.display = "none";
+            }
+        }
+
+        document.getElementById("aggiorna-immagine").addEventListener("click", onImgChange)
+
+        document.getElementById("form").addEventListener("submit", submit)
+
+        function submit(event) {
+            event.preventDefault()
+
+            const image = document.getElementById("image").value;
+            if (image === "") {
+                alert("Inserisci un'immagine del prodotto. ");
+                return;
+            }
+
+            const prezzo = parseFloat(document.getElementById("prezzo").value);
+            if (prezzo <= 0) {
+                alert("Il prezzo non può essere negativo.");
+                return;
+            }
+
+            const quantita = parseInt(document.getElementById("quantita").value);
+            if (quantita <= 0) {
+                alert("La quantità deve essere maggiore di zero.");
+                return;
+            }
+
+            const descrizione = document.getElementById("descrizione").value;
+            if (descrizione === "") {
+                alert("Compila il campo descrizione");
+                return;
+            }
+
+            const categoria = document.getElementById("categoria").value;
+            if (categoria === "") {
+                alert("Compila il campo categoria. ");
+                return;
+            }
+
+            const modello = document.getElementById("modello").value;
+            if (modello === "") {
+                alert("Compila il campo modello. ");
+                return;
+            }
+
+            const marchio = document.getElementById("marchio").value;
+            if (marchio === "Seleziona un marchio...") {
+                alert("Scegli un marchio. ");
+                return;
+            }
+
+            const titolo = document.getElementById("titolo").value;
+            if (titolo === "") {
+                alert("Compila il campo titolo. ");
+                return;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            alert("Prodotto inserito con successo!");
+
+            //... prendi tutti i val da id
+            const nuovoProdotto = {
+                "id": 0,
+                "image": image,
+                "titolo": titolo,
+                "marchio": marchio,
+                "modello": modello,
+                "descrizione": descrizione,
+                "prezzo": prezzo,
+                "categoria": categoria,
+                "quantita": quantita,
+            }
+
+            let prodotti = JSON.parse(localStorage.getItem("prodotti"));
+            if (prodotti === null || prodotti === undefined) {
+                prodotti = [];
+            }
+
+            let prodottiOrdinatiPerId = prodotti.sort(function (a, b) {
+                return order[a.id] - order[b.id];
+            })
+
+            let idCorrente = 1;
+            if (prodottiOrdinatiPerId.length > 0) {
+                idCorrente = prodottiOrdinatiPerId[0].id + 1;
+            }
+
+            nuovoProdotto.id = idCorrente
+            prodotti.push(nuovoProdotto)
+            localStorage.setItem("prodotti", JSON.stringify(prodotti))
+
+            return;
+        }
+
+
+
+
+
+        // function selectChanged(selectElement) {
+        //     var selectedOption = selectElement.options[selectElement.selectedIndex];
+        //     var description = selectedOption.getAttribute("data-descrizione");
+        //     var quantity = selectedOption.getAttribute("data-quantita");
+        //     var price = selectedOption.getAttribute("data-prezzo");
+        //     var image = selectedOption.getAttribute("data-immagine");
+
+        //     document.getElementById("descrizione").value = description;
+        //     document.getElementById("quantita").value = quantity;
+        //     document.getElementById("prezzo").value = price;
+        //     document.getElementById("immagine").value = image;
+        // } 
+    </script>
 </body>
 
 </html>
