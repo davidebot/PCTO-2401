@@ -49,21 +49,21 @@ function addRowInContainer() {
 
     });
     prodotti.forEach(element => {
-        if (element.id % 2 === 1 && offerte1.childElementCount < 3) {
+        if (element.id % 2 === 1 && acquistati1.childElementCount < 3) {
             const card = createCard(element)
             const col = document.createElement('div');
             col.classList.add('col');
             col.appendChild(card)
             acquistati1.appendChild(col)
         } else {
-            if (element.id % 2 === 0 && offerte2.childElementCount < 3) {
+            if (element.id % 2 === 0 && acquistati2.childElementCount < 3) {
                 const card = createCard(element)
                 const col = document.createElement('div');
                 col.classList.add('col');
                 col.appendChild(card)
                 acquistati2.appendChild(col)
             } else {
-                if (element.id % 2 === 0 && offerte3.childElementCount < 3) {
+                if (element.id % 2 === 0 && acquistati3.childElementCount < 3) {
                     const card = createCard(element)
                     const col = document.createElement('div');
                     col.classList.add('col');
